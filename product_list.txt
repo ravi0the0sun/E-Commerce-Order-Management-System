@@ -1,10 +1,10 @@
-1dcf8b15-0d74-455a-b251-9d48a3b2310b,Samsung S10,1299.99,100
-b09cf29e-6c00-442c-8757-22ae96e65aef,Macbook Pro M4,2999.99,350
-daa49743-420f-405b-9273-2e5746f17c17,Dyson Vacuum Cleaner V8,499.0,55
-95dc5a23-efe4-4408-8fda-100ff8784259,Nespresso Pod Coffee,206.6.60
-690a4368-1747-45ae-9891-5a5da60408f7,Nintendo Switch OLED,499.95,20
-6b1b7935-d8a2-4ac8-a9f6-e3b6688d7f37,AirPods Pro Gen 2,299.99,24
-41322b76-961b-4128-8331-9f09efcab60b,Asus Laptop,3899.50,90
-96b904e4-aa33-46c0-be9b-999ad88de809,MSI MotherBoard,280.90,99
-7418707e-c521-4a2a-b7f4-e56657d0c178,Iphone 15,1209.70,88
-c1f9103f-df0a-46f6-8c0c-884db6a50a72,DGI Drone,407.55,99
+1dcf8b15-0d74-455a-b251-9d48a3b2310b,Samsung S10,1299.99,100,Text Description
+b09cf29e-6c00-442c-8757-22ae96e65aef,Macbook Pro M4,2999.99,350,Text Description
+daa49743-420f-405b-9273-2e5746f17c17,Dyson Vacuum Cleaner V8,499.0,55,Text Description
+95dc5a23-efe4-4408-8fda-100ff8784259,Nespresso Pod Coffee,206.6,60,Text Description
+690a4368-1747-45ae-9891-5a5da60408f7,Nintendo Switch OLED,499.95,20,Text Description
+6b1b7935-d8a2-4ac8-a9f6-e3b6688d7f37,AirPods Pro Gen 2,299.99,24,Text Description
+41322b76-961b-4128-8331-9f09efcab60b,Asus Laptop,3899.50,90,Text Description
+96b904e4-aa33-46c0-be9b-999ad88de809,MSI MotherBoard,280.90,99,Text Description
+7418707e-c521-4a2a-b7f4-e56657d0c178,Iphone 15,1209.70,88,Text Description
+c1f9103f-df0a-46f6-8c0c-884db6a50a72,DGI Drone,407.55,99,Text Description

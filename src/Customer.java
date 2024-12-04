@@ -6,14 +6,15 @@ public class Customer {
     private int phone;
     private String email;
 
-    public Customer(String name, int phone, String email) {
+    public Customer(String name, String email, int phone) {
         this.customer_id = UUID.randomUUID().toString();
         this.name = name;
-        this.phone = phone;
         this.email = email;
+        this.phone = phone;
+
     }
 
-    public Customer(String customer_id, String name, int phone, String email) {
+    public Customer(String customer_id, String name, String email, int phone) {
         this.customer_id = customer_id;
         this.name = name;
         this.phone = phone;
@@ -46,5 +47,9 @@ public class Customer {
     }
     public void set_email(String email) {
         this.email = email;
+    }
+
+    public String toString() {
+        return String.format("%s,%s,%s,%d", this.customer_id, this.name, this.email, this.phone);
     }
 }
