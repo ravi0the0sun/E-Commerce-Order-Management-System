@@ -4,20 +4,17 @@ import java.util.UUID;
 public class Order {
     private String order_id;
     private String customer_id;
-    private Date order_date;
     private Product[] products;
 
-    public Order(String customer_id, Date order_date, Product[] products) {
+    public Order(String customer_id, Product[] products) {
         this.order_id = UUID.randomUUID().toString();
         this.customer_id = customer_id;
-        this.order_date = order_date;
         this.products = products;
     }
 
     public Order(String order_id, String customer_id, Date order_date, Product[] products) {
         this.order_id = order_id;
         this.customer_id = customer_id;
-        this.order_date = order_date;
         this.products = products;
     }
 
@@ -41,9 +38,9 @@ public class Order {
     }
 
     public String save_order() {
-        String order_data = String.format("%s,%s,%s", this.order_id, this.customer_id, this.order_date.toString());
+        String order_data = String.format("%s,%s", this.order_id, this.customer_id);
         for (Product p : this.products) {
-            order_data = order_date + "," + p;
+            order_data = order_data + "," + p.get_product_id();
         }
 
         return order_data;

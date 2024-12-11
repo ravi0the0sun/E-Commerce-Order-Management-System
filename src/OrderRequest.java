@@ -1,6 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class OrderRequest {
     public static void order_confirm(Customer customer, ArrayList<Product> cart) {
@@ -26,8 +30,9 @@ public class OrderRequest {
         frame.add(footer, BorderLayout.SOUTH);
 
         confirm.addActionListener(e -> {
-
+            write_order(customer, cart);
         });
+
         back.addActionListener(e -> {
            int response =  JOptionPane.showConfirmDialog(frame, "Do you want to continue? If yes your cart will be deleted", "Confirm", JOptionPane.YES_NO_OPTION);
            if (response == JOptionPane.YES_OPTION) {
@@ -65,5 +70,30 @@ public class OrderRequest {
 
         frame.setVisible(true);
 
+    }
+
+    public static void write_order(Customer customer, ArrayList<Product> cart) {
+        File order_file = new File("order_list.txt");
+        try {
+            Scanner scanner = new Scanner(order_file);
+        } catch (FileNotFoundException e) {
+            create_file(order_file);
+        }
+        Order order = new Order(customer.get_customer_id(), cart.toArray(Product[]::new));
+        System.out.println(order.save_order());
+    }
+
+    public static void create_file(File file) {
+        try  {
+            if (file.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                throw new IOException();
+            }
+        }catch(IOException e) {
+            System.out.println("Error creating file");
+            JOptionPane.showMessageDialog(null, "Error creating file, Closing application");
+
+        }
     }
 }

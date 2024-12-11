@@ -113,13 +113,12 @@ public class ProductRequest {
         frame.setLocationRelativeTo(null);
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(5, 1, 10, 10));
+        panel.setLayout(new GridLayout(4, 1, 10, 10));
         frame.add(panel);
 
         JLabel customer_name = new JLabel("Welcome " + customer.get_name());
         JButton buy_button = new JButton("Buy Product");
         JButton add_product = new JButton("Add Product");
-        JButton edit_customer = new JButton("Edit Customer");
         JButton log_out = new JButton("Log Out");
 
         buy_button.addActionListener(e -> {
@@ -132,14 +131,15 @@ public class ProductRequest {
             frame.dispose();
         });
 
-        edit_customer.addActionListener(e -> {
-
+        log_out.addActionListener(e -> {
+            CustomerRequest.login_screen();
+            frame.dispose();
         });
+
 
         panel.add(customer_name, BorderLayout.CENTER);
         panel.add(buy_button, BorderLayout.CENTER);
         panel.add(add_product, BorderLayout.CENTER);
-        panel.add(edit_customer, BorderLayout.CENTER);
         panel.add(log_out, BorderLayout.CENTER);
 
         frame.setVisible(true);
