@@ -5,7 +5,6 @@ public class Order {
     private String order_id;
     private String customer_id;
     private Date order_date;
-    private boolean order_status;
     private Product[] products;
 
     public Order(String customer_id, Date order_date, Product[] products) {
@@ -13,7 +12,6 @@ public class Order {
         this.customer_id = customer_id;
         this.order_date = order_date;
         this.products = products;
-        this.order_status = false;
     }
 
     public Order(String order_id, String customer_id, Date order_date, Product[] products) {
@@ -21,7 +19,6 @@ public class Order {
         this.customer_id = customer_id;
         this.order_date = order_date;
         this.products = products;
-        this.order_status = false;
     }
 
     public String get_order_id() {
@@ -30,14 +27,6 @@ public class Order {
 
     public String get_customer_id() {
         return this.customer_id;
-    }
-
-    public void set_order_status(boolean order_status) {
-        this.order_status = order_status;
-    }
-
-    public boolean get_order_status() {
-        return this.order_status;
     }
 
     public Product[] get_products() {
@@ -52,11 +41,11 @@ public class Order {
     }
 
     public String save_order() {
-        StringBuilder order_date = new StringBuilder(String.format("%s,%s,%s,%s", this.order_id, this.customer_id, this.order_date, this.order_status));
+        String order_data = String.format("%s,%s,%s", this.order_id, this.customer_id, this.order_date.toString());
         for (Product p : this.products) {
-            order_date.append(",").append(p.get_product_id());
+            order_data = order_date + "," + p;
         }
 
-        return order_date.toString();
+        return order_data;
     }
 }

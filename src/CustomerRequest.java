@@ -59,6 +59,7 @@ public class CustomerRequest {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,200);
         frame.setLayout(new GridLayout(2, 2, 10, 10));
+        frame.setLocationRelativeTo(null);
 
         JLabel email_label = new JLabel("Enter Email");
         JTextField email_txt = new JTextField();
@@ -78,6 +79,8 @@ public class CustomerRequest {
                 JOptionPane.showMessageDialog(frame, "Please enter a valid email address");
             } else {
                 JOptionPane.showMessageDialog(frame, "You have successfully logged in");
+                ProductRequest.selection_screen(customer);
+                frame.dispose();
             }
         });
 
@@ -86,7 +89,6 @@ public class CustomerRequest {
             frame.dispose();
         });
 
-        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
@@ -95,6 +97,7 @@ public class CustomerRequest {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,200);
         frame.setLayout(new GridLayout(4, 2, 10, 10));
+        frame.setLocationRelativeTo(null);
 
         JLabel name_label = new JLabel("Enter Name");
         JTextField name_txt = new JTextField();
@@ -155,11 +158,11 @@ public class CustomerRequest {
             }
 
             JOptionPane.showMessageDialog(frame, "You have successfully Signed in");
+            ProductRequest.selection_screen(customer);
             frame.dispose();
 
         });
 
-        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }

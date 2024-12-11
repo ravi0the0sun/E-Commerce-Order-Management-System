@@ -24,4 +24,14 @@ public class Util {
             return false;
         }
     }
+
+    public static boolean isDouble(String i) {
+        try {
+            Double.parseDouble(i);
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println(e.toString());
+            return false;
+        }
+    }
 }

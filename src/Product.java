@@ -15,6 +15,14 @@ public class Product {
         this.description = description;
     }
 
+    public Product(String product_name, double price, int quantity, String description) {
+        this.product_id = UUID.randomUUID().toString();
+        this.product_name = product_name;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+    }
+
     public Product() {
         this.product_id = UUID.randomUUID().toString();
     }
@@ -53,5 +61,9 @@ public class Product {
 
     public String get_description() {
         return this.description;
+    }
+
+    public String to_string() {
+        return String.format("%s,%s,%2f,%d,%s", this.product_id, this.product_name, this.price, this.quantity, this.description);
     }
 }
